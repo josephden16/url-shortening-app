@@ -1,0 +1,24 @@
+@font-face {
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-family: Poppins;
+}
+@font-face {
+    src: url("../fonts/Poppins-Bold.ttf");
+    font-family: PoppinsBold;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+$gray: hsl(0, 0%, 75%);
+$grayishViolet: hsl(257, 7%, 63%);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);

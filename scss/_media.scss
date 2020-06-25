@@ -1,0 +1,99 @@
+@media screen and (min-width: 920px) {
+    .nav {
+        margin-left: 50px;
+        @at-root #{&}__logo {
+            padding-top: 24px;
+            margin-right: 28px;
+            .logo {
+                width: 120%;
+            }
+        }
+        @at-root #{&}__main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 55% 45%;
+            @at-root #{&}__offers {
+                padding: 29px 40px;
+            }
+            @at-root #{&}__auth {
+                padding: 24px 8px;
+                text-align: center;
+            }
+        }
+        @at-root #{&}__hamburger {
+            display: none;
+        }
+    }
+    .intro-img {
+        width: 50%;
+    }
+}
+
+.nav-links {
+    text-decoration: none;
+    color: $grayishViolet;
+    font-weight: 700;
+    padding: 8px 12px;
+    &:hover {
+        color: $veryDarkViolet;
+        cursor: pointer;
+    }
+}
+.btn {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: $cyan;
+    font-weight: 700;
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    @at-root #{&}--signup {
+        padding: 12px 12px;
+        border-radius: 1.4rem;
+        width: 110px;
+        font-size: 17px;
+        margin-left: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mob-nav {
+        position: relative;
+        top: 90px;
+        ul {
+            margin: auto;
+            background-color: $darkViolet;
+            border-radius: 12px;
+            width: 90%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 0;
+            align-items: center;
+        }
+        li {
+            margin: 15px 12px;
+            color: #fff;
+            font-weight: 700;
+            padding: 0;
+        }
+        li>.links {
+            color: #fff;
+            text-decoration: none;
+        }
+        .line {
+            width: 90%;
+            height: 2px;
+            background-color: $gray;
+        }
+    }
+    
+    .btn--mob {
+        width: 200px;
+        padding: 12px;
+        border-radius: 1.3rem;
+        font-size: 18px;
+    }
+}
