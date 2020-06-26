@@ -114,22 +114,11 @@
     font-size: 18px;
 }
 
-.intro-img {
-    width: 100%;
-}
-.open {
-    display: block;
-}
-
-.close {
-    display: none;
-}
-
 .container {
     width: 100%;
 }
 
-.intro {
+.intro__container {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -147,8 +136,11 @@
             margin: 8px 8px 35px 8px;
         }
     }
+    @at-root #{&}__mockup {
+        width: 86%;
+        margin: auto;
+    }
 }
-
 .form-container {
     background-image: url("../images/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
@@ -184,7 +176,7 @@
 }
 
 .offers {
-    background-color: rgb(208, 204, 216);
+    background-color: #f0f1f6;
     padding-top: 125px;
     padding-bottom: 45px;
     z-index: -1;
@@ -220,32 +212,34 @@
                 height: 70px;
                 background-color: $cyan;
                 position: absolute;
-                content: '';
+                content: "";
             }
 
             &__img {
                 z-index: 1;
                 margin: auto;
                 position: relative;
-                top: -58px;
+                top: -52px;
                 .card-one-img {
                     margin-top: 25px;
                 }
             }
 
-            &__heading {
-                color: $veryDarkViolet;
-                font-family: PoppinsBold;
-                margin-top: 0;
-            }
+            .text-container {
+                &__heading {
+                    color: $veryDarkViolet;
+                    font-family: PoppinsBold;
+                    margin-top: 0;
+                }
 
-            &__content {
-                font-size: 16px;
-                color: $grayishViolet;
-                font-weight: 500;
-                padding-bottom: 42px;
-                width: 95%;
-                margin: auto;
+                &__content {
+                    font-size: 16px;
+                    color: $grayishViolet;
+                    font-weight: 500;
+                    padding-bottom: 42px;
+                    width: 95%;
+                    margin: auto;
+                }
             }
         }
         .cardTwo {
@@ -261,33 +255,49 @@
                 height: 70px;
                 background-color: $cyan;
                 position: absolute;
-                content: '';
+                content: "";
             }
 
             &__img {
                 z-index: 1;
                 margin: auto;
+                &__heading {
+                    color: $veryDarkViolet;
+                    font-family: PoppinsBold;
+                    margin-top: 0;
+                }
+
+                &__content {
+                    font-size: 16px;
+                    color: $grayishViolet;
+                    font-weight: 500;
+                    padding-bottom: 42px;
+                    width: 95%;
+                    margin: auto;
+                }
                 position: relative;
-                top: -58px;
+                top: -52px;
                 left: 3px;
                 .card-two-img {
                     margin-top: 27px;
                 }
             }
 
-            &__heading {
-                color: $veryDarkViolet;
-                font-family: PoppinsBold;
-                margin-top: 0;
-            }
+            .text-container {
+                &__heading {
+                    color: $veryDarkViolet;
+                    font-family: PoppinsBold;
+                    margin-top: 0;
+                }
 
-            &__content {
-                font-size: 16px;
-                color: $grayishViolet;
-                font-weight: 500;
-                padding-bottom: 42px;
-                width: 95%;
-                margin: auto;
+                &__content {
+                    font-size: 16px;
+                    color: $grayishViolet;
+                    font-weight: 500;
+                    padding-bottom: 42px;
+                    width: 95%;
+                    margin: auto;
+                }
             }
         }
         .cardThree {
@@ -309,19 +319,23 @@
                 }
             }
 
-            &__heading {
-                color: $veryDarkViolet;
-                font-family: PoppinsBold;
-                margin-top: 0;
-            }
+            .text-container {
+                margin-top: -32px;
+                &__heading {
+                    color: $veryDarkViolet;
+                    font-family: PoppinsBold;
+                    margin-top: 0;
+                }
 
-            &__content {
-                font-size: 16px;
-                color: $grayishViolet;
-                font-weight: 500;
-                padding-bottom: 42px;
-                width: 90%;
-                margin: auto;
+                &__content {
+                    font-size: 16px;
+                    color: $grayishViolet;
+                    font-weight: 500;
+                    padding: 0;
+                    padding-bottom: 42px;
+                    width: 90%;
+                    margin: auto;
+                }
             }
         }
     }
@@ -329,8 +343,9 @@
 
 .get-started {
     background-color: $darkViolet;
-    background-image: url('../images/bg-boost-mobile.svg');
+    background-image: url("../images/bg-boost-mobile.svg");
     background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     padding: 45px 25px;
     &-text {
@@ -340,6 +355,19 @@
         margin-bottom: 25px;
     }
 }
+
+// reusable classes
+.intro-img {
+    width: 100%;
+}
+.open {
+    display: block;
+}
+
+.close {
+    display: none;
+}
+
 .round-bg {
     width: 100px;
     height: 100px;
@@ -347,4 +375,34 @@
     border-radius: 50%;
     text-align: center;
 }
+
+.nav-links {
+    text-decoration: none;
+    color: $grayishViolet;
+    font-weight: 700;
+    padding: 8px 12px;
+    &:hover {
+        color: $veryDarkViolet;
+        cursor: pointer;
+    }
+}
+.btn {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: $cyan;
+    font-weight: 700;
+    &:hover {
+        opacity: 0.4;
+        cursor: pointer;
+    }
+    @at-root #{&}--signup {
+        padding: 12px 12px;
+        border-radius: 1.4rem;
+        width: 110px;
+        font-size: 17px;
+        margin-left: 13px;
+    }
+}
+
 @import "media";
