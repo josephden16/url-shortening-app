@@ -483,6 +483,60 @@ body {
   margin-left: 13px;
 }
 
+.footer {
+  background-color: #232127;
+  padding: 25px;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  text-align: center;
+}
+
+.footer-container .footer-logo {
+  font-size: 2.2rem;
+  color: #fff;
+  font-family: PoppinsBold;
+}
+
+.footer-heading {
+  font-family: PoppinsBold;
+  color: #fff;
+  font-size: 17px;
+}
+
+.footer-link-container {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.footer-link-container .footer-links {
+  padding: 6px;
+}
+
+.footer-link-container .footer-links a {
+  text-decoration: none;
+  color: #bfbfbf;
+  font-size: 16px;
+}
+
+.footer-link-container .footer-links a:hover {
+  color: #2acfcf;
+}
+
+.social span {
+  padding: 8px;
+}
+
 @media screen and (min-width: 700px) {
   .intro__container {
     display: -webkit-box;
@@ -757,6 +811,54 @@ body {
   .intro__container__mockup {
     width: 100%;
     margin: auto;
+  }
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    text-align: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-container .footer-logo {
+    font-size: 2.2rem;
+    color: #fff;
+    font-family: PoppinsBold;
+  }
+  .footer-link-container {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 18px;
+    text-align: left;
+  }
+  .footer-link-container .footer-links {
+    padding: 0;
+    padding-bottom: 5px;
+  }
+  .footer-link-container .footer-links a {
+    text-decoration: none;
+    color: #bfbfbf;
+  }
+  .footer-link-container .footer-links a:hover {
+    color: #2acfcf;
+  }
+  .footer {
+    background-color: #232127;
+    padding: 45px;
+  }
+  .social {
+    margin-top: 19px;
+  }
+  .social span {
+    padding: 15px;
+    cursor: pointer;
   }
 }
 

@@ -281,6 +281,51 @@
         width: 100%;
         margin: auto;
     }
+
+    .footer-container {
+        display: flex;
+        flex-flow: row nowrap;
+        text-align: left;
+        justify-content: space-between;
+        .footer-logo {
+            font-size: 2.2rem;
+            color: #fff;
+            font-family: PoppinsBold;
+        }
+    }
+
+    .footer-link-container {
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 18px;
+        text-align: left;
+        .footer-links {
+            padding: 0;
+            padding-bottom: 5px;
+            a {
+                text-decoration: none;
+                color: $gray;
+                &:hover {
+                    color: $cyan;
+                }
+            }
+        }
+    }
+
+    .footer {
+        background-color: $veryDarkViolet;
+        padding: 45px;
+    }
+
+    .social {
+        margin-top: 19px;
+        span {
+            padding: 15px;
+            cursor: pointer;
+        }
+    }
 }
 
 @media screen and (min-width: 1300px) {
