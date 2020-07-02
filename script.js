@@ -30,9 +30,7 @@ function verifyLink(link) {
 }
 
 function update(json) {
-  if (json.hashid in hashArr) {
-    return
-  } else {
+  if (hashArr.indexOf(json.hashid) === -1) {
     apiResults.innerHTML += `<div class="result">
     <div class="normal-url">
       <a href="${json.url}" target="_blank">${json.url}</a>
@@ -41,6 +39,8 @@ function update(json) {
       <div id="short-url"><a href="https://rel.ink/${json.hashid}" target="_blank" id="url">https://rel.ink/${json.hashid}</a></div>
       <button class="copy btn">Copy</button>
     </div>`;
+  } else {
+    return;
   }
 }
 // fetch url hash from api
@@ -58,8 +58,8 @@ async function getLink(data) {
     const response = await fetchResult;
     if (response.ok) {
       const jsonData = await response.json();
-      hashArr.push(jsonData.hashid);
       update(jsonData);
+      hashArr.push(jsonData.hashid);
       console.log(jsonData);
     } else {
       alert('Failed to Fetch');
@@ -79,6 +79,7 @@ btn.addEventListener('click', function () {
   if (urlField.value) {
     errorText.innerText = '';
     urlField.style.border = 'none';
+    urlField.style.color = 'hsl(257, 27%, 26%)'
     if (verifyLink(urlField.value)) {
       let data = readLink();
       getLink(data);
@@ -89,6 +90,7 @@ btn.addEventListener('click', function () {
   } else {
     errorText.innerText = 'Please add a link';
     urlField.style.border = '3px solid hsl(0, 87%, 67%)';
+    urlField.style.color = 'hsl(0, 87%, 67%)'
   }
 });
 

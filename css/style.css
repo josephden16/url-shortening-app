@@ -609,20 +609,6 @@ body {
   color: #2acfcf;
 }
 
-.footer-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-}
-
-.footer-links div {
-  margin: 0 35px;
-}
-
 .social span {
   padding: 8px;
 }
