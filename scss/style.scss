@@ -27,7 +27,7 @@
     */
     @at-root #{&}__logo {
         padding-top: 24px;
-        margin-left: 28px;
+        margin-left: 20px;
         .logo {
             width: 100%;
         }
@@ -108,20 +108,18 @@
 }
 
 .btn-getStarted {
-    width: 230px;
+    width: 180px;
     padding: 16px;
     border-radius: 1.7rem;
     font-size: 18px;
 }
 
-.container {
-    width: 100%;
-}
 
 .intro__container {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    overflow-x: hidden;
     @at-root #{&}__text {
         text-align: center;
         margin: 5px;
@@ -137,13 +135,18 @@
         }
     }
     @at-root #{&}__mockup {
-        width: 86%;
-        margin: auto;
+        width: 100%;
+        .intro-img {
+            width: 140%;
+            position: relative;
+            right: -13px;
+        }
     }
 }
 .form-container {
     background-image: url("../images/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
+    background-position: right;
     padding: 25px 25px;
     background-color: $darkViolet;
     width: 70%;
@@ -156,21 +159,28 @@
         display: flex;
         flex-flow: column nowrap;
         margin: auto;
-        #urlField {
+        margin-bottom: 8px;
+        #error-text {
+            color: $red;
+            font-style: italic;
+            font-size: small;
+            margin-bottom: 8px;
+            margin-top: 8px;
+        }
+        #url-field {
             padding: 15px;
             border-radius: 6px;
-            border: none;
-            margin-bottom: 14px;
             outline: none;
+            border: none;
             font-size: 18px;
-            font-weight: 700;
-            color: $grayishViolet;
+            font-weight: 500;
+            color: $darkViolet;
         }
-
         #submit {
             padding: 14px;
             border-radius: 6px;
             font-size: 18px;
+            width: 100%;
         }
     }
 }
@@ -180,6 +190,56 @@
     padding-top: 125px;
     padding-bottom: 45px;
     z-index: -1;
+    .api-results {
+        margin: auto;
+        width: 81%;
+        border-radius: 4px;
+        text-align: left;
+        margin-bottom: 65px;
+        .result {
+            display: grid;
+            grid-template-columns: 100%;
+            margin: 18px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            .normal-url {
+                text-align: left;
+                border-bottom: 1px solid $gray;
+                border-width: 100%;
+                padding: 12px 18px;
+                font-size: medium;
+                a {
+                    color: $veryDarkViolet;
+                    text-decoration: none;
+                    word-wrap: break-word;
+                }
+            }
+            .shortened-url {
+                padding: 12px 18px;
+                display: flex;
+                flex-flow: column nowrap;
+                #short-url {
+                    margin-bottom: 12px;
+                    font-size: medium;
+                    a {
+                        text-decoration: none;
+                        color: $cyan;
+                    }
+                }
+                .copy {
+                    padding: 8px;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: PoppinsBold;
+                    cursor: pointer;
+                    &:focus {
+                        background-color: $darkViolet;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
     .stats {
         text-align: center;
         margin-bottom: 75px;
@@ -189,7 +249,7 @@
         }
         &__content {
             margin: 12px;
-            font-weight: 700;
+            font-weight: 500;
             color: $grayishViolet;
         }
     }
@@ -345,7 +405,6 @@
     background-color: $darkViolet;
     background-image: url("../images/bg-boost-mobile.svg");
     background-repeat: no-repeat;
-    background-position: center;
     text-align: center;
     padding: 45px 25px;
     &-text {
@@ -393,7 +452,7 @@
     background-color: $cyan;
     font-weight: 700;
     &:hover {
-        opacity: 0.4;
+        opacity: 0.9;
         cursor: pointer;
     }
     @at-root #{&}--signup {
@@ -446,11 +505,26 @@
         }
     }
 }
-
+.footer-links {
+    display: flex;
+    flex-flow: row nowrap;
+    div {
+        margin: 0 35px;
+    }
+}
 .social {
     span {
         padding: 8px;
     }
+}
+
+.error {
+    border: 1px solid $red;
+    color: $red;
+}
+
+.hidden-result {
+    display: none;
 }
 
 @import "media";

@@ -29,110 +29,124 @@
       <div class="hamburger"></div>
     </div>
   </nav>
-  <main class="container">
-    <div class="mob-nav">
-      <ul>
-        <li><a href="#" class="links">Features</a></li>
-        <li><a href="#" class="links">Pricing</a></li>
-        <li><a href="#" class="links">Resources</a></li>
-        <li class="line"></li>
-        <li><a href="#" class="links">Login</a></li>
-        <li><button class="btn btn--mob">Sign Up</button></li>
-      </ul>
+  <div class="mob-nav">
+    <ul>
+      <li><a href="#" class="links">Features</a></li>
+      <li><a href="#" class="links">Pricing</a></li>
+      <li><a href="#" class="links">Resources</a></li>
+      <li class="line"></li>
+      <li><a href="#" class="links">Login</a></li>
+      <li><button class="btn btn--mob">Sign Up</button></li>
+    </ul>
+  </div>
+  <section class="intro">
+    <div class="intro__container">
+      <div class="intro__container__mockup">
+        <img class="intro-img" src="images/illustration-working.svg" alt="working illustration">
+      </div>
+      <div class="intro__container__text">
+        <h1 class="heading">More than just shorter links</h1>
+        <p class="content"> Build your brand’s recognition and get detailed insights
+          on how your links are performing.</p>
+        <button class="btn btn-getStarted">Get Started</button>
+      </div>
     </div>
-    <section class="intro">
-      <div class="intro__container">
-        <div class="intro__container__mockup">
-          <img class="intro-img" src="images/illustration-working.svg" alt="working illustration">
+    <div class="form-container">
+      <div class="form">
+        <input type="text" name="url" id="url-field" placeholder="Shorten a link here...">
+        <span id="error-text"></span>
+        <button id="submit" class="btn">Shorten It!</button>
+        </divn>
+      </div>
+  </section>
+  <section class="offers">
+    <div class="api-results">
+      <div class="hidden-result">
+        <div class="normal-url">
+          <a href="#" target="_blank">https://www.frontendmentor.io</a>
         </div>
-        <div class="intro__container__text">
-          <h1 class="heading">More than just shorter links</h1>
-          <p class="content"> Build your brand’s recognition and get detailed insights
-            on how your links are performing.</p>
-          <button class="btn btn-getStarted">Get Started</button>
+        <div class="shortened-url">
+          <div id="short-url"><a href="#" target="_blank">https://rel.ink/bbbb</a></div>
+          <button id="copyBtn" class="btn copy">Copy</button>
         </div>
       </div>
-      <div class="form-container">
-        <form action="" class="form">
-          <input type="text" name="url" id="urlField" placeholder="Shorten a link here...">
-          <input type="submit" value="Shorten It!" id="submit" class="btn">
-        </form>
-      </div>
-    </section>
-    <section class="offers">
-      <div class="stats">
-        <h1 class="stats__heading">Advanced Statistics</h1>
-        <p class="stats__content"> Track how your links are performing across the web with our
-          advanced statistics dashboard.</p>
-      </div>
-      <div class="cards-container">
-        <div class="cardOne">
-          <div class="round-bg cardOne__img">
-            <img src="images/icon-brand-recognition.svg" alt="" class="card-one-img">
-          </div>
-          <div class="text-container">
-            <h1 class="text-container__heading">Brand Recognition</h1>
-            <p class="text-container__content">Boost your brand recognition with each click. Generic links don’t
-              mean a thing. Branded links help instil confidence in your content.</p>
-          </div>
+    </div>
+    </div>
+    </div>
+    <div class="stats">
+      <h1 class="stats__heading">Advanced Statistics</h1>
+      <p class="stats__content"> Track how your links are performing across the web with our
+        advanced statistics dashboard.</p>
+    </div>
+    <div class="cards-container">
+      <div class="cardOne">
+        <div class="round-bg cardOne__img">
+          <img src="images/icon-brand-recognition.svg" alt="" class="card-one-img">
         </div>
-        <div class="cardTwo">
-          <div class="round-bg cardTwo__img">
-            <img src="images/icon-detailed-records.svg" alt="" class="card-two-img">
-          </div>
-          <div class="text-container">
-            <h1 class="text-container__heading">Detailed Records</h1>
-            <p class="text-container__content">Gain insights into who is clicking your links. Knowing when and where
-              people engage with your content helps inform better decisions.
-            </p>
-          </div>
-        </div>
-        <div class="cardThree">
-          <div class="round-bg cardThree__img">
-            <img src="images/icon-fully-customizable.svg" alt="" class="card-three-img">
-          </div>
-          <div class="text-container">
-            <h1 class="text-container__heading">Fully Customizable</h1>
-            </h1>
-            <p class="text-container__content">Improve brand awareness and content discoverability through customizable
-              links, supercharging audience engagement.
-            </p>
-          </div>
+        <div class="text-container">
+          <h1 class="text-container__heading">Brand Recognition</h1>
+          <p class="text-container__content">Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.</p>
         </div>
       </div>
-    </section>
-    <section class="get-started">
-      <h1 class="get-started-text">Boost your links today</h1>
-      <button class="btn btn-getStarted">Get Started</button>
-    </section>
-  </main>
+      <div class="cardTwo">
+        <div class="round-bg cardTwo__img">
+          <img src="images/icon-detailed-records.svg" alt="" class="card-two-img">
+        </div>
+        <div class="text-container">
+          <h1 class="text-container__heading">Detailed Records</h1>
+          <p class="text-container__content">Gain insights into who is clicking your links. Knowing when and where
+            people engage with your content helps inform better decisions.
+          </p>
+        </div>
+      </div>
+      <div class="cardThree">
+        <div class="round-bg cardThree__img">
+          <img src="images/icon-fully-customizable.svg" alt="" class="card-three-img">
+        </div>
+        <div class="text-container">
+          <h1 class="text-container__heading">Fully Customizable</h1>
+          </h1>
+          <p class="text-container__content">Improve brand awareness and content discoverability through customizable
+            links, supercharging audience engagement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="get-started">
+    <h1 class="get-started-text">Boost your links today</h1>
+    <button class="btn btn-getStarted">Get Started</button>
+  </section>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-logo">Shortly</div>
-      <div class="features">
-        <h2 class="footer-heading">Features</h2>
-        <ul class="footer-link-container">
-          <li class="footer-links"><a href="#">Link Shortening</a></li>
-          <li class="footer-links"><a href="#">Branded Links</a></li>
-          <li class="footer-links"><a href="#">Analytics</a></li>
-        </ul>
-      </div>
-      <div class="resources">
-        <h2 class="footer-heading">Resources</h2>
-        <ul class="footer-link-container">
-          <li class="footer-links"><a href="#">Blog</a></li>
-          <li class="footer-links"><a href="#">Developers</a></li>
-          <li class="footer-links"><a href="#">Support</a></li>
-        </ul>
-      </div>
-      <div class="company">
-        <h2 class="footer-heading">Company</h2>
-        <ul class="footer-link-container">
-          <li class="footer-links"><a href="#">About</a></li>
-          <li class="footer-links"><a href="#">Our Team</a></li>
-          <li class="footer-links"><a href="#">Careers</a></li>
-          <li class="footer-links"><a href="#">Contact</a></li>
-        </ul>
+      <div class="footer-links">
+        <div class="features">
+          <h2 class="footer-heading">Features</h2>
+          <ul class="footer-link-container">
+            <li class="footer-links"><a href="#">Link Shortening</a></li>
+            <li class="footer-links"><a href="#">Branded Links</a></li>
+            <li class="footer-links"><a href="#">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="resources">
+          <h2 class="footer-heading">Resources</h2>
+          <ul class="footer-link-container">
+            <li class="footer-links"><a href="#">Blog</a></li>
+            <li class="footer-links"><a href="#">Developers</a></li>
+            <li class="footer-links"><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="company">
+          <h2 class="footer-heading">Company</h2>
+          <ul class="footer-link-container">
+            <li class="footer-links"><a href="#">About</a></li>
+            <li class="footer-links"><a href="#">Our Team</a></li>
+            <li class="footer-links"><a href="#">Careers</a></li>
+            <li class="footer-links"><a href="#">Contact</a></li>
+          </ul>
+        </div>
       </div>
       <div class="social">
         <span><img src="images/icon-facebook.svg" alt="facebook"></span>
