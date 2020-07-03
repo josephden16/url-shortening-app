@@ -85,7 +85,6 @@ body {
 
 .nav__hamburger .hamburger::before {
   position: absolute;
-  top: 9px;
   width: 24px;
   height: 3px;
   content: "";
@@ -358,10 +357,9 @@ body {
 }
 
 .offers .cards-container .cardOne::after {
+  position: absolute;
   width: 7px;
   height: 70px;
-  background-color: #2acfcf;
-  position: absolute;
   content: "";
 }
 
@@ -797,10 +795,10 @@ body {
     margin-bottom: 9px;
   }
   .offers .cards-container .cardOne::after {
-    width: 7px;
-    height: 70px;
-    background-color: #2acfcf;
     position: absolute;
+    width: 7px;
+    height: 0px;
+    background-color: #2acfcf;
     content: "";
   }
   .offers .cards-container .cardOne__img {
