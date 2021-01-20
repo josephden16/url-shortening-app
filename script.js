@@ -30,13 +30,13 @@ function verifyLink(link) {
 }
 
 function update(json) {
-  if (hashArr.indexOf(json.hashid) === -1) {
+  if (hashArr.indexOf(json.code) === -1) {
     apiResults.innerHTML += `<div class="result">
     <div class="normal-url">
-      <a href="${json.url}" target="_blank">${json.url}</a>
+      <a href="${json.original_link}" target="_blank">${json.original_link}</a>
     </div>
     <div class="shortened-url">
-      <div id="short-url"><a href="https://rel.ink/${json.hashid}" target="_blank" id="url">https://rel.ink/${json.hashid}</a></div>
+      <div id="short-url"><a href="https://${json.short_link}" target="_blank" id="url">${json.short_link}</a></div>
       <button class="copy btn">Copy</button>
     </div>`;
   } else {
@@ -44,29 +44,16 @@ function update(json) {
   }
 }
 // fetch url hash from api
-// data = {url: "https://www.frontendmentor.io"};
 async function getLink(data) {
-  const URL = `https://rel.ink/api/links/`;
-  try {
-    const fetchResult = fetch(URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-    const response = await fetchResult;
-    if (response.ok) {
-      const jsonData = await response.json();
-      update(jsonData);
-      hashArr.push(jsonData.hashid);
-      console.log(jsonData);
-    } else {
-      alert('Failed to Fetch');
-    }
-  } catch (error) {
-    alert('Failed to Fetch, check your internet connection');
-  }
+  const URL = `https://api.shrtco.de/v2/shorten?url=${data.url}`;
+  axios.get(URL)
+    .then((res) => {
+      update(res.data.result);
+      hashArr.push(res.data.result.code);
+    })
+    .catch((err) => {
+      alert('Failed to Fetch, check your internet connection');
+    })
 }
 
 hamburger.addEventListener('click', () => {
@@ -104,7 +91,7 @@ function updateClipboard(newClip) {
   })
 }
 
-window.addEventListener('click', () => {
+window.addEventListener('click', (event) => {
   if (event.target.classList.contains("copy")) {
     let text = event.target.previousElementSibling.textContent;
     updateClipboard(text);
